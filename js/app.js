@@ -2,7 +2,74 @@
  * Create a list that holds all of your cards
  */
 
-
+ cardsIcon =
+  [
+      {
+          imgNumber: 1,
+          img:"img/chick.svg"
+      },
+      {
+          imgNumber: 1,
+          img:"img/chick.svg"
+      },
+      {
+          imgNumber: 2,
+          img:"img/whale.svg"
+      },
+      {
+          imgNumber: 2,
+          img:"img/whale.svg"
+      },
+      {
+          imgNumber: 3,
+          img:"img/fox.svg"
+      },
+      {
+          imgNumber: 3,
+          img:"img/fox.svg"
+      },
+      {
+          imgNumber: 4,
+          img:"img/pig.svg"
+      },
+      {
+          imgNumber: 4,
+          img:"img/pig.svg"
+      },
+      {
+          imgNumber: 5,
+          img:"img/koala.svg"
+      },
+      {
+          imgNumber: 5,
+          img:"img/koala.svg"
+      },
+      {
+          imgNumber: 6,
+          img:"img/hedgehog.svg"
+      },
+      {
+          imgNumber: 6,
+          img:"img/hedgehog.svg"
+      },
+      {
+          imgNumber: 7,
+          img:"img/lemur.svg"
+      },
+      {
+          imgNumber: 7,
+          img:"img/lemur.svg"
+      },
+      {
+          imgNumber: 8,
+          img:"img/crab.svg"
+      },
+      {
+          imgNumber: 8,
+          img:"img/crab.svg"
+      }
+  ]
+  
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
