@@ -4,67 +4,83 @@
 
 cardsIcon = [{
     imgNumber: 1,
-    img: "img/chick.svg"
+    img: "img/chick.svg",
+    imgName: "chick"
   },
   {
     imgNumber: 1,
-    img: "img/chick.svg"
+    img: "img/chick.svg",
+    imgName: "chick"
   },
   {
     imgNumber: 2,
-    img: "img/whale.svg"
+    img: "img/whale.svg",
+    imgName: "whale"
   },
   {
     imgNumber: 2,
-    img: "img/whale.svg"
+    img: "img/whale.svg",
+    imgName: "whale"
   },
   {
     imgNumber: 3,
-    img: "img/fox.svg"
+    img: "img/fox.svg",
+    imgName: "fox"
   },
   {
     imgNumber: 3,
-    img: "img/fox.svg"
+    img: "img/fox.svg",
+    imgName: "fox"
   },
   {
     imgNumber: 4,
-    img: "img/pig.svg"
+    img: "img/pig.svg",
+    imgName: "pig"
   },
   {
     imgNumber: 4,
-    img: "img/pig.svg"
+    img: "img/pig.svg",
+    imgName: "pig"
   },
   {
     imgNumber: 5,
-    img: "img/koala.svg"
+    img: "img/koala.svg",
+    imgName: "koala"
   },
   {
     imgNumber: 5,
-    img: "img/koala.svg"
+    img: "img/koala.svg",
+    imgName: "koala"
   },
   {
     imgNumber: 6,
-    img: "img/hedgehog.svg"
+    img: "img/hedgehog.svg",
+    imgName: "hedgehog"
   },
   {
     imgNumber: 6,
-    img: "img/hedgehog.svg"
+    img: "img/hedgehog.svg",
+    imgName: "hedgehog"
   },
   {
     imgNumber: 7,
-    img: "img/lemur.svg"
+    img: "img/lemur.svg",
+    imgName: "lemur"
   },
   {
     imgNumber: 7,
-    img: "img/lemur.svg"
+    img: "img/lemur.svg",
+    imgName: "lemur"
   },
   {
     imgNumber: 8,
-    img: "img/crab.svg"
+    img: "img/crab.svg",
+    imgName: "crab"
   },
   {
     imgNumber: 8,
-    img: "img/crab.svg"
+    img: "img/crab.svg",
+    imgName: "crab"
   }
 ]
 
@@ -174,7 +190,7 @@ function startGame() {
   for (let i = 0; i < cards.length; i++) {
     cards[i].children.item(0).setAttribute("src", cardsIcon[i].img);
     cards[i].children.item(0).setAttribute("value", cardsIcon[i].imgNumber);
-    //TODO: add alt to img
+    cards[i].children.item(0).setAttribute("alt", "photo of the"+cardsIcon[i].imgName);
     cards[i].classList.remove("show", "open", "match", "disabled");
   }
 
