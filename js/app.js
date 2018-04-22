@@ -239,3 +239,63 @@ function moveCounter(){
        }
      }
    }
+
+   // *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
+   function matched () {
+
+     // console.log("They match");
+     console.log(openedCards[0]);
+     console.log(openedCards[1]);
+
+     openedCards[0].classList.add("match");
+     openedCards[1].classList.add("match");
+     // console.log("Opened cards",openedCards);
+     openedCards = [];
+
+     congratulations();
+
+   }
+
+
+   function unmatched () {
+
+     // console.log("They don't match");
+
+     console.log(openedCards[0]);
+     console.log(openedCards[1]);
+     openedCards[0].classList.add("unmatched");
+     openedCards[1].classList.add("unmatched");
+
+     // console.log("Opened cards",openedCards);
+
+     setTimeout(disableCards, 100); //disable card to not click other before unmatched animation ends
+     setTimeout(function(){
+
+       openedCards[0].classList.remove("open", "show", "disabled", "unmatched");
+       openedCards[1].classList.remove("open", "show", "disabled", "unmatched");
+
+       openedCards = [];
+
+     },1000);
+
+   setTimeout(enableCards, 1000); //enable cards to continue game
+   }
+
+
+   function disableCards() {
+
+     for (i = 0 ; i < cards.length; i++) {
+       if ((openedCards[0] !== cards[i]) || (openedCards[1] !== cards[i])) {
+         cards[i].classList.add("disabled");
+       }
+     }
+   }
+
+   function enableCards() {
+
+     for (i = 0 ; i < cards.length; i++) {
+       if ((openedCards[0] !== cards[i]) || (openedCards[1] !== cards[i])) {
+         cards[i].classList.remove("disabled");
+       }
+     }
+   }
