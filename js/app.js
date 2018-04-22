@@ -199,3 +199,43 @@ function moveCounter(){
     cards[i].addEventListener("click", showCard);
 
    }
+
+   // *  - display the card's symbol (put this functionality in another function that you call from this one)
+
+
+   function showCard () {
+
+     this.classList.add("open");
+     this.classList.add("show");
+     this.classList.add("disabled");
+     showedCard = this;
+     openedCard();
+
+   }
+
+   // *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
+
+   // *  - if the list already has another card, check to see if the two cards match
+
+   function openedCard () {
+
+   openedCards.push(showedCard);
+
+   let cardNum = openedCards.length;
+   // console.log("There are",cardNum,"opened cards");
+     if (cardNum === 2) {
+
+       moveCounter();
+       // console.log("You opened two cards, lets compare them");
+       if (openedCards[0].innerHTML === openedCards[1].innerHTML) {
+
+         matched();
+
+       } else {
+
+         unmatched();
+         rating();
+
+       }
+     }
+   }
