@@ -190,7 +190,7 @@ function startGame() {
   for (let i = 0; i < cards.length; i++) {
     cards[i].children.item(0).setAttribute("src", cardsIcon[i].img);
     cards[i].children.item(0).setAttribute("value", cardsIcon[i].imgNumber);
-    cards[i].children.item(0).setAttribute("alt", "photo of "+cardsIcon[i].imgName);
+    cards[i].children.item(0).setAttribute("alt", "photo of the"+cardsIcon[i].imgName);
     cards[i].classList.remove("show", "open", "match", "disabled");
   }
 
