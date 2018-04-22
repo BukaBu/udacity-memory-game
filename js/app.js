@@ -139,6 +139,22 @@ function moveCounter(){
       },1000);
   }
 
+  function rating() {
+      if (moves > 11 && moves < 16){
+          for( i= 0; i < 3; i++){
+              if(i > 1){
+                  stars[i].style.visibility = "collapse";
+              }
+          }
+      }
+      else if (moves > 17){
+          for( i= 0; i < 3; i++){
+              if(i > 0){
+                  stars[i].style.visibility = "collapse";
+              }
+          }
+      }
+  }
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
