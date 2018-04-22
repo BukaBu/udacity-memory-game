@@ -299,3 +299,76 @@ function moveCounter(){
        }
      }
    }
+
+   // *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
+
+   function welcomeModal () {
+      // Get the modal
+   const welcomeModal = document.getElementById('welcome-modal');
+
+   // Get the button that opens the modal
+   const btn = document.getElementById("myButton");
+
+   // Get the <span> element that closes the modal
+   const welcomeSpan = document.getElementsByClassName("close1")[0];
+
+   // When the user clicks the button start game
+   btn.addEventListener("click", function () {
+    welcomeModal.style.display = "none";
+    startGame();
+   });
+
+   // When the user clicks on <span> (x), close the modal
+   welcomeSpan.addEventListener("click", function () {
+    welcomeModal.style.display = "none";
+    // console.log("dziala");
+    startGame();
+   });
+
+
+   // When the user clicks anywhere outside of the modal, close it
+   window.addEventListener("click", function (event) {
+    if (event.target == welcomeModal) {
+        welcomeModal.style.display = "none";
+        startGame();
+    }
+   });
+
+   }
+
+   function congratulations(){
+
+    const congratulationSpan = document.getElementsByClassName("close2")[0];
+    let congratModal = document.getElementById("congratulations");
+
+      if (matchedCard.length === 16) {
+
+          clearInterval(interval);
+          finalTime = timer.innerHTML;
+
+      // congratModal.classList.add("show");//TODO: wyodrebnij z tego funkcje osobna zeby nie powtarzac kodu
+
+            congratModal.style.display = "block";
+
+          // declare star rating variable
+          let starRating = document.querySelector(".stars").innerHTML;
+
+          //showing move, rating, time on modal
+          document.getElementById("finalMove").innerHTML = moves;
+          document.getElementById("starRating").innerHTML = starRating;
+          document.getElementById("totalTime").innerHTML = finalTime;
+
+          congratulationSpan.addEventListener("click", function () {
+            congratModal.style.display = "none";
+            startGame();
+          });
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.addEventListener("click", function (event) {
+            if (event.target == congratModal) {
+                congratModal.style.display = "none";
+                startGame();
+            }
+          });
+      }
+   }
