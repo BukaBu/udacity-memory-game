@@ -342,7 +342,7 @@ function moveCounter(){
     let congratModal = document.getElementById("congratulations");
     const playAgainButton = document.getElementById("playAgain");
 
-      if (matchedCard.length === 2) {
+      if (matchedCard.length === 16) {
 
           clearInterval(interval);
           finalTime = timer.innerHTML;
