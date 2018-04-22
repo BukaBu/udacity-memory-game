@@ -340,8 +340,9 @@ function moveCounter(){
 
     const congratulationSpan = document.getElementsByClassName("close2")[0];
     let congratModal = document.getElementById("congratulations");
+    const playAgainButton = document.getElementById("playAgain");
 
-      if (matchedCard.length === 16) {
+      if (matchedCard.length === 2) {
 
           clearInterval(interval);
           finalTime = timer.innerHTML;
@@ -363,6 +364,7 @@ function moveCounter(){
             startGame();
           });
 
+
           // When the user clicks anywhere outside of the modal, close it
           window.addEventListener("click", function (event) {
             if (event.target == congratModal) {
@@ -371,4 +373,9 @@ function moveCounter(){
             }
           });
       }
+      // When play again button is clicked start the Game
+      playAgainButton.addEventListener("click", function() {
+        congratModal.style.display = "none";
+        startGame();
+      });
    }
