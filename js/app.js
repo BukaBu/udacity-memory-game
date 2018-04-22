@@ -69,7 +69,23 @@
           img:"img/crab.svg"
       }
   ]
-  
+
+  let card = document.querySelectorAll(".card");
+  const cards = Array.from(document.querySelectorAll(".card"));
+  const button = document.querySelector(".restart");
+  // array for opened cards
+  let openedCards = [];
+  let showedCard; //single opened card
+
+  let moves = 0;
+  let counter = document.querySelector(".moves");
+  const stars = document.querySelectorAll(".fa-star");
+
+  let matchedCard = document.getElementsByClassName("match");
+
+  let starsList = document.querySelectorAll(".stars li");
+
+  const restartButton = document.querySelector(".restart");
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
