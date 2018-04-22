@@ -1,20 +1,25 @@
 # Memory Game Project
 
-## Table of Contents
+## About the Game
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+Memory Game is one of FEND Udacity Nanodegree course project.
+The game is built to test the user memory.
+
+## How to play
+Load this link in your browser https://bukabu.github.io/udacity-memory-game/
 
 ## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+* Click on a card
+* Keep revealing cards and try to remember each unveiled card.
+* Match cards properly with less moves and in faster time
+* Less moves you have your rating is better
 
-To get started, open `js/app.js` and start building out the app's functionality
+## How was it done
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+Game was created in HTML, CSS and Vanilla JS.
 
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+* created a deck of cards which contain images of animals that shuffles when game starts
+* created a counter to count the moves made by player and timer to count the time
+* added effects to cards when they are matched or unmatched
+* create a pop-up modal at the beginning of the game and at the end with congratulations and results of the game
