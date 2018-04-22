@@ -119,7 +119,26 @@ function moveCounter(){
         startTimer();
     }
   }
-  
+
+  // game timer
+  let second = 0, minute = 0; hour = 0;
+  const timer = document.querySelector(".timer");
+  let interval;
+  function startTimer(){
+      interval = setInterval(function(){
+          timer.innerHTML = minute+"mins "+second+"secs";
+          second++;
+          if(second == 60){
+              minute++;
+              second=0;
+          }
+          if(minute == 60){
+              hour++;
+              minute = 0;
+          }
+      },1000);
+  }
+
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
