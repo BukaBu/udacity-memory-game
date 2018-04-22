@@ -83,6 +83,32 @@
     </div>
   </div>
 
+  <div id="welcome-modal" class="modal">
+  <div class="modal-content">
+    <span class="close1">&times;</span>
+    <div class="welcome-modal-message">
+      <p>Welcome in Animals Memory Game</p><img src="img\pig.svg" class="visible" alt="">
+    </div>
+    <div class="start-game">
+      <button id="myButton">Start the Game </button>
+    </div>
+  </div>
+</div>
+
+<div id="congratulations" class="modal-congrat">
+    <div class="modal-content">
+        <span class="close2">&times;</span>
+        <div class="content-1">
+            <h2>Congratulations! <img src="img\clap.svg" class="visible" alt="">You're a winner <img src="img\medal.svg" class="visible" alt=""></h2>
+        </div>
+        <div class="content-2">
+            <p>You made <span id=finalMove> </span> moves </p>
+            <p>in <span id=totalTime> </span> </p>
+            <p>Rating:  <span id=starRating></span></p>
+        </div>
+      </div>
+</div>
+
     <script src="js/app.js"></script>
 </body>
 </html>
