@@ -1,5 +1,5 @@
 /*  TODO: make media queries*/
-
+/*  TODO: comment code*/
 
 /* GENERAL RULES */
 
@@ -104,11 +104,11 @@ img {
 
 
 .deck .card {
-  height: 125px;
-  width: 125px;
+  /* height: 125px;
+  width: 125px; */
+  max-width: calc(100% * (1/4) - 20px);
+  min-height: 130px;
   background: #2e3d49;
-  /* font-size: 0; */
-  color: #ffffff;
   border-radius: 8px;
   cursor: pointer;
   display: flex;
@@ -467,4 +467,29 @@ img {
   to {
     transform: scale3d(1, 1, 1);
   }
+}
+
+/* media queries */
+
+@media screen and (max-width: 700px) {
+
+  .deck {
+    width: 80vw;
+    min-height: 680px;
+    height: 60vh;
+    margin-left: auto;
+    margin-right: auto;
+
+
+  }
+
+/* TODO: zobacz ten margin auto jak w portfolio niech sie robi sam */
+
+  .deck .card {
+    margin: 1%;
+    min-width: 60px;
+    min-height: 100px;
+
+  }
+
 }
