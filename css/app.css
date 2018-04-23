@@ -474,9 +474,9 @@ img {
 @media screen and (max-width: 700px) {
 
   .deck {
-    width: 80vw;
-    min-height: 680px;
-    height: 60vh;
+    width: 85vw;
+    min-height: 70vh;
+    /* height: 60vh; */
     margin-left: auto;
     margin-right: auto;
 
@@ -487,8 +487,8 @@ img {
 
   .deck .card {
     margin: 1%;
-    min-width: 60px;
-    min-height: 100px;
+    max-width: 15vw;
+    min-height: 15vw;
 
   }
 
